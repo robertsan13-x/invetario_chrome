@@ -1,0 +1,203 @@
+/* Define um estilo geral para a página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+/* Adiciona a logo como background com transparência */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/static/images/logo.jpg') no-repeat center center;
+  background-size: 100%; /* Ajusta o tamanho da logo */
+  opacity: 0.1; /* Define a transparência */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+/* Estilização do cabeçalho */
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* Estilização do formulário */
+#formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#formulario input,
+#formulario button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formulario button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#formulario button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização da tabela */
+#tabela_hastes {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tabela_hastes th,
+#tabela_hastes td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#tabela_hastes th {
+  background-color: #007bff;
+  color: white;
+}
+
+#tabela_hastes tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+#tabela_hastes tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilização do modal */
+#modal-editar {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-editar .conteudo {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#modal-editar .conteudo h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#modal-editar .conteudo input {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#modal-editar .botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#modal-editar .botoes button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#modal-editar .botoes button.salvar {
+  background-color: #28a745;
+  color: white;
+}
+
+#modal-editar .botoes button.salvar:hover {
+  background-color: #218838;
+}
+
+#modal-editar .botoes button.cancelar {
+  background-color: #dc3545;
+  color: white;
+}
+
+#modal-editar .botoes button.cancelar:hover {
+  background-color: #c82333;
+}
+
+/* Estilização do footer */
+footer {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
+#filtro {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#filtro input,
+#filtro select {
+  padding: 5px;
+  font-size: 14px;
+}
+#filtro button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#filtro button:hover {
+  background-color: #0056b3;
+}
+
