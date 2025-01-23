@@ -35,6 +35,11 @@ def inicializar_bd():
 def index():
     return render_template("index.html")
 
+# Rota para o inventário
+@app.route('/inventario')
+def inventario():
+    return render_template('inventario.html')
+
 @app.route("/listar_hastes", methods=["GET"])
 def listar_hastes():
     conn = conectar_bd()

@@ -3,146 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventário de Hastes</title>
-    <link rel="stylesheet" href="/static/css/estilo.css" />
+    <title>Inventário de Matéria Prima</title>
+    <link rel="stylesheet" href="/static/css/estilo2.css" />
   </head>
   <body>
-    <h1>Inventário de Matéria Prima</h1>
-
-    <!-- Filtro -->
-    <div id="filtro">
-      <select id="criterio">
-        <option value="codigo">Código</option>
-        <option value="descricao" selected>Descrição</option>
-        <option value="localizacao">Localização</option>
-        <option value="estado">OS / Estoque</option>
-      </select>
-      <input type="text" id="filtro-texto" placeholder="Digite o filtro" />
-      <button id="filtrar">Filtrar</button>
-    </div>
-
-    <!-- Formulário para adicionar haste -->
-    <div id="formulario">
-      <input type="text" id="codigo" placeholder="Código" required />
-      <input type="text" id="descricao" placeholder="Descrição" required />
-      <input
-        type="number"
-        id="diametro_externo"
-        placeholder="Diâm. Externo (mm)"
-        required
-      />
-      <input
-        type="number"
-        id="diametro_interno"
-        placeholder="Diâm. Interno (mm)"
-      />
-      <input
-        type="number"
-        id="comprimento"
-        placeholder="Comprimento (mm)"
-        required
-      />
-      <input type="number" id="quantidade" placeholder="Quantidade" required />
-      <input type="text" id="unidade" placeholder="Unidade" required />
-      <input type="text" id="estado" placeholder="OS / Estoque" required />
-      <input type="text" id="localizacao" placeholder="Localização" required />
-      <input type="text" id="observacoes" placeholder="Observações" required />
-      <button id="adicionar">Adicionar Matéria Prima</button>
-    </div>
-
-    <!-- Tabela de hastes -->
-    <table id="tabela_hastes">
-      <thead>
-        <tr>
-          <th>Código</th>
-          <th>Descrição</th>
-          <th>Diâm. Externo</th>
-          <th>Comprimento</th>
-          <th>Quantidade</th>
-          <th>Unidade</th>
-          <th>OS / Estoque</th>
-          <th>Localização</th>
-          <th>Observacões</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <!-- Modal para editar haste -->
-    <div id="modal-editar">
-      <div class="conteudo">
-        <h2>Editar Matéria Prima</h2>
-        <div id="formulario-editar">
-          <input type="text" id="editar-codigo" placeholder="Código" required />
-          <input
-            type="text"
-            id="editar-descricao"
-            placeholder="Descrição"
-            required
-          />
-          <input
-            type="number"
-            id="editar-diametro_externo"
-            placeholder="Diâm. Externo (mm)"
-            required
-          />
-          <input
-            type="number"
-            id="editar-diametro_interno"
-            placeholder="Diâm. Interno (mm)"
-          />
-          <input
-            type="number"
-            id="editar-comprimento"
-            placeholder="Comprimento (mm)"
-            required
-          />
-          <input
-            type="number"
-            id="editar-quantidade"
-            placeholder="Quantidade"
-            required
-          />
-          <input
-            type="text"
-            id="editar-unidade"
-            placeholder="Unidade"
-            required
-          />
-          <input
-            type="text"
-            id="editar-estado"
-            placeholder="OS / Estoque"
-            required
-          />
-          <input
-            type="text"
-            id="editar-localizacao"
-            placeholder="Localização"
-            required
-          />
-          <input
-            type="text"
-            id="editar-observacoes"
-            placeholder="Observações"
-            required
-          />
+    <div class="login-container">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Usuário:</label>
+          <input type="text" id="username" name="username" required />
         </div>
-        <div class="botoes">
-          <button class="salvar">Salvar</button>
-          <button class="cancelar">Cancelar</button>
+        <div class="form-group">
+          <label for="password">Senha:</label>
+          <div class="input-group">
+            <input type="password" id="password" name="password" required />
+            <button type="button" id="togglePassword" class="toggle-btn">
+              👁️
+            </button>
+          </div>
         </div>
-      </div>
+        <button type="submit" class="btn">Entrar</button>
+        <p id="message" style="display: none" class="error-message"></p>
+      </form>
     </div>
 
     <footer>
       <p>
-        &copy; 2025 Grupo Chrome. Todos os direitos reservados á Robert S. e
+        &copy; 2025 Grupo Chrome. Todos os direitos reservados à Robert S. e
         Anderson S.
       </p>
     </footer>
 
-    <script src="/static/js/script.js"></script>
+    <script src="/static/js/script2.js"></script>
   </body>
 </html>
